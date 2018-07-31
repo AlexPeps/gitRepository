@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+<style>
+
+    #content /* the main 'div' in which everything is contained css */
+    {
+    display: grid;
+    margin: 0 auto;
+    border: 1px solid black;
+ 
+
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 35px 122.4px 941px 200px;
+    
+    }
+
+    #interior-content /* css div containes everything except nav bar */
+    {
+        border: 1px solid lightgray;
+    }
+   
+
+
+   #header /* header bar div css */
+   {
+    position: relative;
+    text-align: center;
+    height: 120px 
+   
+    
+    
+    
+   }
+    
+   .bottom-left /* css for text on header */
+   {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    text-align: left;
+
+ 
+
+   }
+
+   .header-image-left /* css for image on left side of header */
+   {
+       position: relative;
+       float: none;
+       border-bottom: 1px solid lightgray !important;
+       border-left: 1px solid lightgray !important;
+       
+   }
+
+   .header-image-right /* css for image on right side of header */
+   {
+       position: relative;
+       float: right;
+       bottom: 121px;
+       border-right: 1px solid lightgray;
+       border-top: 1px solid lightgray;
+      
+   }
+   .w3-container /* lower search nav bar  */
+   {
+       position: fixed;
+       bottom: 250px;
+       width: 1930px;
+       left: -15px;
+       float: left;
+   }
+</style>
+</head>
+<body>
+        
+              
+    <div id = "content"> <!-- div for everything including top nav bar  -->
+
+            <div class="w3-bar w3-white">  <!-- top navigation bar -->
+                <div class="w3-bar-item w3-button" ><strong> SR-2018 </strong></div>
+                <a href="#" class="w3-bar-item w3-button" style="float:right;">Login</a> <!-- float:right moves the object to the right -->
+                <a href="#" class="w3-bar-item w3-button" style="float:right;">Register</a>
+              </div>
+
+
+              <div id ="interior-content"> <!-- div for everything except nav bar  -->
+              
+        <header id = "header"> <!--  header bar  -->
+            
+                   <div class="header-image-left"><img src = "img/header.jpg" alt = "header" style ="width:50%;" align ="left" height="120px"> </div> 
+                   <div class="header-image-right"><img src = "img/header.jpg" alt = "header" style ="width:960;" align ="right" height="120px" > </div> 
+                    <div class = "bottom-left"><h1>Super Rugby 2018 </h1><p> Your one stop for all things Super Rugby in 2018</p> </div>
+
+        </header>
+                   
+                    <div class="w3-container">
+                         
+                            <div class="w3-bar w3-white w3-border"> <!-- lower search nav bar -->
+                    
+                              <a href="#" class="w3-bar-item w3-button w3-mobile">Teams</a>
+                              <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+                              <button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
+                              <p> Teams </p>
+                            </div>
+                  
+                    
+                  
+        </div>
+        </div>
+    </div>
+</body>
+</html>
