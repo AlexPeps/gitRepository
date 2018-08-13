@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,49 +12,76 @@
     {
     display: grid;
     margin: 0 auto;
-    border: 1px solid black;
+    
+/*     border: 1px solid black; */
+ 
  
 
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-rows: 35px 122.4px 941px 200px;
+    
     
     }
 
-    #interior-content /* css div containes everything except nav bar */
-    {
-        border: 1px solid lightgray;
-    }
    
 
+  .wrapper
+  {
+   
+    display: grid;
+    column-width:200px;
+    position: relative;
+    float: right;
+    grid-template-columns: 250px 250px 250px 250px 250px 375px;
+    grid-template-rows: 330px 330px;
+    grid-gap: 10px 10px;
+    bottom: 680px;
+    left: 232px;
+    
+
+
+   
+    
+   
+    
+    
+  }
 
    #header /* header bar div css */
    {
-    position: relative;
-    text-align: center;
-    height: 120px 
+    position: static;
+    height: 120px;
    
     
-    
+   
     
    }
     
-   .bottom-left /* css for text on header */
+   .bottom-left /* css for h1 on header */
+   {
+   
+    position: absolute;
+    text-align: left;
+    color: #4CAF50;
+    font-weight: bolder;
+    transform: translateX(5%) translateY(10%);
+    text-shadow: 1px 1px grey;
+    font-family: Verdana,Geneva,sans-serif; 
+    
+   }
+
+   .header-under-text /* css for text under main heading */
    {
     position: absolute;
-    bottom: 8px;
-    left: 16px;
     text-align: left;
-
- 
-
+    transform: translateX(5%) translateY(100%);
    }
 
    .header-image-left /* css for image on left side of header */
    {
-       position: relative;
+       
        float: none;
        border-bottom: 1px solid lightgray !important;
        border-left: 1px solid lightgray !important;
+       border-top: 1px solid lightgray !important;
        
    }
 
@@ -61,19 +89,143 @@
    {
        position: relative;
        float: right;
-       bottom: 121px;
-       border-right: 1px solid lightgray;
-       border-top: 1px solid lightgray;
+       bottom: 120px;
+       
+       
       
    }
    .w3-container /* lower search nav bar  */
    {
-       position: fixed;
-       bottom: 250px;
-       width: 1930px;
+       position: absolute;
+       width: 101.6%;
        left: -15px;
-       float: left;
+       top: 156px;
+      
+       
    }
+  
+  .teams
+  {
+      
+    float: left;
+    width: 12%;
+    transform: translate(-5%,2%);
+    
+     
+    
+  }
+
+  .search
+  {
+      
+    margin: 1px;
+    float: left;
+    border: 1px solid lightgray;
+    text-align: center;
+    height: 39.9px;
+    
+     
+    
+  }
+
+  .Go
+  {
+      padding: 1.9px;
+      margin-left: 5px;
+      height: 8px;
+      
+  }
+
+  #stats
+  {
+    position: absolute;
+    float: right;
+    top: 50%;
+    left: 80.5%;
+    transform: translateX(-50%) translateY(-50%);
+      
+      
+      
+      
+  }
+  #positions-button
+  {
+      float: left;
+      margin: 2px;
+      text-align: center;
+      
+      
+      
+     
+      
+  }
+  
+ 
+ #leftv li  /* team list bar */
+ {
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+    margin-top: 10px;
+    list-style-type: none;  
+    width: 220px;
+    
+
+ }
+
+ .w3-card-4  /* player cards  */
+ {
+     position: relative;
+   
+     height: 100%
+     
+   
+ }
+
+     
+     
+     
+ 
+ .w3-card-2
+ {
+     
+     display: inline-block;
+ }
+
+ .w3-bar-item
+ {
+ 
+ position: relative;
+ border: 1px lightgrey;
+ padding: 0px;
+ margin: 0px;
+ 
+ 
+ 
+ }
+
+
+
+ #footer {
+
+    
+   
+    position: relative;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    bottom: 591px;
+ 
+}
+ 
+#aside /* large player css */
+{
+position: static;
+width: 100%;
+height: 550px;
+}
+ 
 </style>
 </head>
 <body>
@@ -81,37 +233,192 @@
               
     <div id = "content"> <!-- div for everything including top nav bar  -->
 
+<div id = "top-nav"> 
             <div class="w3-bar w3-white">  <!-- top navigation bar -->
                 <div class="w3-bar-item w3-button" ><strong> SR-2018 </strong></div>
                 <a href="#" class="w3-bar-item w3-button" style="float:right;">Login</a> <!-- float:right moves the object to the right -->
                 <a href="#" class="w3-bar-item w3-button" style="float:right;">Register</a>
               </div>
+            </div>
 
-
-              <div id ="interior-content"> <!-- div for everything except nav bar  -->
+              
               
         <header id = "header"> <!--  header bar  -->
             
                    <div class="header-image-left"><img src = "img/header.jpg" alt = "header" style ="width:50%;" align ="left" height="120px"> </div> 
                    <div class="header-image-right"><img src = "img/header.jpg" alt = "header" style ="width:960;" align ="right" height="120px" > </div> 
-                    <div class = "bottom-left"><h1>Super Rugby 2018 </h1><p> Your one stop for all things Super Rugby in 2018</p> </div>
+                    <div class = "bottom-left"><h1>Super Rugby 2018 </h1></div>
+                    <div class = "header-under-text">  <p> Your one stop for all things Super Rugby in 2018</p> </div>
 
-        </header>
+        
+       <div id = "filter">  <div class="w3-container"> <!-- filter bar -->
+        
+           <div class="w3-bar w3-white w3-border" style="height:45px"> <!-- lower search nav bar -->
+
+            <div id = "fl">
+            <div class ="teams"><a href="#" class="w3-bar-item w3-button w3-mobile" style="width:25%" ><strong>Teams</strong></a> 
+             </div> 
+            </div>
+             <div id = "fc"> <div id = "positions-button"> <button class="w3-button w3-grey" > positions </button></div>
+             <div class = "search"> <input type="text" class="w3-bar-item w3-input w3-white"  placeholder="Search.." > </div>
+             <div class = "Go" ><button class="w3-bar-item w3-button w3-green">Go</button>
+             </div>
+            </div>
+             <div id = "fr"> <div id = "stats"><strong><p> Stats </p> </strong>  
+                
+                 </div> 
+                </div>
+             
+        </div>
+                  
+          </header>
+
+<aside id= "leftv"> <!-- 'leftv' left side team bar -->
+    
+    
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+    <li> Team</li>
+</aside>
+
+
+
+    <div class ="wrapper">
+        
+      
+            <div class="w3-card-4" style="width:100%">
+                    <img src="img/player.png" alt="player"style="width:100%">
+                    <strong><p> Player</p></strong>
+                    <p>Position</p> </div>
                    
-                    <div class="w3-container">
-                         
-                            <div class="w3-bar w3-white w3-border"> <!-- lower search nav bar -->
-                    
-                              <a href="#" class="w3-bar-item w3-button w3-mobile">Teams</a>
-                              <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
-                              <button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
-                              <p> Teams </p>
-                            </div>
-                  
-                    
-                  
-        </div>
-        </div>
-    </div>
+                    <div class="w3-card-4" style="width:100%">
+                            <img src="img/player.png" alt="player"style="width:100%">
+                            <strong><p> Player</p></strong>
+                            <p>Position</p> </div>
+            
+                            <div class="w3-card-4" style="width:100%">
+                                    <img src="img/player.png" alt="player"style="width:100%">
+                                    <strong><p> Player</p></strong>
+                                    <p>Position</p> </div>
+            
+                                    <div class="w3-card-4" style="width:100%">
+                                            <img src="img/player.png" alt="player"style="width:100%">
+                                            <strong><p> Player</p></strong>
+                                            <p>Position</p> </div>
+                                            
+                                            <div class="w3-card-4" style="width:100%">
+                                                    <img src="img/player.png" alt="player"style="width:100%">
+                                                    <strong><p> Player</p></strong>
+                                                    <p>Position</p> </div>
+            
+                                      <!--  large player css -->
+            <aside id = "aside"> 
+                 <div class="w3-card-4" style="width:100%">
+                    <img src="img/player.png" alt="player"style="width:100%">
+                    <strong><p> Player</p></strong>
+                    <p>Position</p> 
+                    <p>Height</p>
+                    <p>Weight</p>
+                </div>
+</aside>
+                                                           
+                                                                    <div class="w3-card-4" style="width:100%">
+                                                                            <img src="img/player.png" alt="player"style="width:100%">
+                                                                            <strong><p> Player</p></strong>
+                                                                            <p>Position</p> </div>
+
+                                                                            <div class="w3-card-4" style="width:100%">
+                                                                                    <img src="img/player.png" alt="player"style="width:100%">
+                                                                                    <strong><p> Player</p></strong>
+                                                                                    <p>Position</p> </div>
+            
+                                                                                    <div class="w3-card-4" style="width:100%">
+                                                                                            <img src="img/player.png" alt="player"style="width:100%">
+                                                                                            <strong><p> Player</p></strong>
+                                                                                            <p>Position</p> </div>
+                                                                                            
+                                                                                            <div class="w3-card-4" style="width:100%">
+                                                                                                    <img src="img/player.png" alt="player"style="width:100%">
+                                                                                                    <strong><p> Player</p></strong>
+                                                                                                    <p>Position</p> </div>
+
+                                                                                                    <div class="w3-card-4" style="width:100%">
+                                                                                                            <img src="img/player.png" alt="player"style="width:100%">
+                                                                                                            <strong><p> Player</p></strong>
+                                                                                                            <p>Position</p> </div>
+                                                                                            
+                                                                            
+                                                                                        
+
+                
+                </div>
+            <!--     <aside id = "right-player">
+                        
+                        <div class="w3-card-4" style="width:100%">
+                        <img src="img/player.png" alt="player"style="width:100%">
+                        <strong><p> Player</p></strong>
+                        <p>Position</p>
+                        <p>Height</p>
+                        <p>Weight</p>
+                        
+                        
+                        
+                        </aside>  -->
+
+</section>
+
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          
+                            
+
+                          
+                           
+                                    </div>
+                           
+                    </div>
+                  
+                          
+
+        </div>
+      
+        </div>
+        
+    </div>
+
+    <footer id = "footer">
+        
+        <div class="w3-bar w3-white">  <!-- bottom navigation bar -->
+            <div class="w3-bar-item" > &copy; - I213 2018</div>
+          </div>  
+            
+        </footer>
+    
 </html>
